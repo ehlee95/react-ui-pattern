@@ -1,0 +1,92 @@
+html {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(13, 62, 16);
+  background: linear-gradient(
+    39deg,
+    rgba(13, 62, 16, 1) 0%,
+    rgba(41, 119, 62, 1) 45%,
+    rgba(69, 190, 112, 1) 100%
+  );
+}
+
+.Info {
+  border: 3px solid white;
+  height: 90vh;
+  width: 90%;
+  margin: 30px;
+  background: linear-gradient(
+    39deg,
+    rgba(83, 83, 83, 1) 0%,
+    rgba(159, 159, 159, 1) 43%,
+    rgba(238, 238, 238, 1) 100%
+  );
+  display: flex;
+}
+
+.image {
+  height: 80%;
+}
+
+.App {
+  display: flex;
+}
+
+.Buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
+  margin-left: 30px;
+}
+
+p {
+  font-size: 60px;
+  font-family: sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+.bad {
+  margin: 24px 49px;
+}
+.B {
+  padding: 10px;
+  background: green;
+  border: 3px solid #fff;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  background: #46a08c; /* Old browsers */
+  background: -webkit-linear-gradient(
+    130deg,
+    #46a08c 0%,
+    #1c3f1d 100%,
+    #303030 90%
+  );
+  background: -moz-linear-gradient(
+    130deg,
+    #46a08c 0%,
+    #1c3f1d 100%,
+    #303030 90%
+  );
+  background: -o-linear-gradient(130deg, #46a08c 0%, #1c3f1d 100%, #303030 90%);
+  background: linear-gradient(130deg, #46a08c 0%, #1c3f1d 100%, #303030 90%);
+  box-shadow: inset 0px 2px 2px rgba(50, 50, 50, 0.6);
+}
+
+.W {
+  padding: 10px 20px;
+}
+
+.G {
+  padding: 10px 20px;
+}
+
+.Fr {
+  padding: 10px 16px;
+}
+
+.Sc {
+  padding: 10px 12px;
+}

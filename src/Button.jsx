@@ -1,16 +1,14 @@
-
-
 function Button() {
   return (
     <div className="Buttons">
-      <div className="Button">
+      <div>
         <p>
           <span className="B W">W</span>alter
         </p>
         <p className="bad">
           <span className="B W">W</span>hite
           </p>
-      </div>
+        </div>
       
       <div className="Button">
         <p>

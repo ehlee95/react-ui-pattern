@@ -5,18 +5,17 @@ import Button from "./Button.jsx";
 import Info from "./Info";
 
 function App() {
+  // default value of character is null
   const [character, setCharacter] = useState(null);
 
   let getCharacters = async () => {
-    // let chars = [];
-    let results = await axios(
-      "https://www.breakingbadapi.com/api/characters/9"
-    );
-    // let hank = await axios("https://www.breakingbadapi.com/api/characters/5");
-    // let walt = await axios("https://www.breakingbadapi.com/api/characters/1");
-    // chars.push(gus);
-    // console.log(chars);
-    setCharacter(results.data[0]);
+    let chars = [];
+    let gus = await axios("https://www.breakingbadapi.com/api/characters/9");
+    let hank = await axios("https://www.breakingbadapi.com/api/characters/5");
+    let walt = await axios("https://www.breakingbadapi.com/api/characters/1");
+    chars = [walt.data[0], hank.data[0], gus.data[0]];
+    console.log(chars);
+    setCharacter(chars);
   };
 
   // make api call
@@ -24,18 +23,13 @@ function App() {
     getCharacters();
   }, []);
 
-  // fetch("https://www.breakingbadapi.com/api/characters/9")
-  //   .then((res) => res.json())
-  //   .then((res) => {
-  //     setCharacter(res[0]);
-  //     console.log(character);
-  //   });
-
   return (
     <div className="App">
       <div className="Buttons">
         <Button />
       </div>
+      {/* This is a short circuit boolean that tells the program not to generate the <Info> div
+      unless character is not null (we set it to null before it is populated by the API call) */}
       {character && <Info char={character} />}
     </div>
   );

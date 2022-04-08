@@ -22,10 +22,35 @@ html {
     rgba(238, 238, 238, 1) 100%
   );
   display: flex;
+  align-items: center;
+}
+
+.helper {
+  line-height: 90vh;
+  margin-left: 30px;
+}
+
+.Bio {
+  height: 80%;
+  width: 80%;
+  border: 3px solid white;
+  margin: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-image: url("../public/smoke.png");
+  color: #f5eb7f;
 }
 
 .image {
   height: 80%;
+  vertical-align: middle;
+  border: 3px solid white;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 .App {

@@ -7,13 +7,14 @@ import Info from "./Info";
 function App() {
   // default value of character is null
   const [character, setCharacter] = useState(null);
+  const [current, setCurrent] = useState(0);
 
   let getCharacters = async () => {
     let chars = [];
     let gus = await axios("https://www.breakingbadapi.com/api/characters/9");
     let hank = await axios("https://www.breakingbadapi.com/api/characters/5");
     let walt = await axios("https://www.breakingbadapi.com/api/characters/1");
-    chars = [walt.data[0], hank.data[0], gus.data[0]];
+    chars = [walt.data[0], gus.data[0], hank.data[0]];
     console.log(chars);
     setCharacter(chars);
   };
@@ -26,11 +27,11 @@ function App() {
   return (
     <div className="App">
       <div className="Buttons">
-        <Button />
+        <Button setCurrent={setCurrent} />
       </div>
       {/* This is a short circuit boolean that tells the program not to generate the <Info> div
       unless character is not null (we set it to null before it is populated by the API call) */}
-      {character && <Info char={character} />}
+      {character && <Info char={character[current]} />}
     </div>
   );
 }

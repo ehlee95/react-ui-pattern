@@ -65,10 +65,21 @@ html {
   margin-left: 30px;
 }
 
+.Button {
+  color: #fff;
+}
+
+li {
+  font-size: 22px;
+}
+
+.Button:hover {
+  color: #f5eb7f;
+}
+
 p {
   font-size: 60px;
   font-family: sans-serif;
-  color: #fff;
   margin: 0;
 }
 

@@ -1,36 +1,35 @@
 function Info(props) {
 
-  let characters = props.char;
-
+  console.log(props.char)
   // deconstruct fields
-  let { img, name, birthday, occupation, portrayed, appearance } = characters[1];
+  let { img, name, birthday, occupation, portrayed, appearance } = props.char;
 
   return (
     <div className="Info">
       <span className="helper"><img className="image" src={img} alt={name} /></span>
       <div className="Bio">
-        <h3>
+        <h2>
           <span>Name : </span>
           {name}
-        </h3>
-        <h3>
+        </h2>
+        <h2>
           <span>Birthday : </span>
           {birthday}
-        </h3>
+        </h2>
         <div>
-          <span><b>Occupation : </b></span>
+          <h2>Occupation : </h2>
           <ul>
             {occupation.map((occ) => (
               <li>{occ}</li>
             ))}
           </ul>
         </div>
-        <h3>
+        <h2>
           <span>Portrayed by : </span>
           {portrayed}
-        </h3>
+        </h2>
         <div>
-          <span><b>Seasons : </b></span>
+          <h2>Seasons : </h2>
           <ul>
             {appearance.map((season) => (
               <li>{season}</li>

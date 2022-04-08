@@ -1,7 +1,8 @@
-function Button() {
+function Button(props) {
   return (
+
     <div className="Buttons">
-      <div>
+      <div className="Button" onClick={() => props.setCurrent(0)}>
         <p>
           <span className="B W">W</span>alter
         </p>
@@ -10,7 +11,7 @@ function Button() {
           </p>
         </div>
       
-      <div className="Button">
+      <div className="Button" onClick={() => props.setCurrent(1)}>
         <p>
           <span className="B G">G</span>us
         </p>
@@ -19,7 +20,7 @@ function Button() {
           </p>
       </div>
       
-      <div className="Button">
+      <div className="Button" onClick={() => props.setCurrent(2)}>
         <p>
           <span className="B G">H</span>ank
         </p>
